@@ -1,0 +1,44 @@
+[ Gym ]                   [ Member ]                   [ Session ]
++---------+              +-----------+                +--------------+
+| Gym_ID  |<----------- | Member_ID |                | Session_ID   |
+| Name    | 1        n  | Last_Name |                | Sport_Type   |
+| Address |              | First_Name|                | Schedule      |
+| Phone   |              | Address    |              | Max_Capacity  |
++---------+              | Date_of_Birth|            +--------------+
+                        | Gender      |
+                        | Gym_ID (FK) | 
+                        +-----------+
+
+                          |
+                          | n
+                          |
+                          |
+                      [ Registration ]
+                      +----------------+
+                      | Registration_ID |
+                      | Member_ID (FK)  |
+                      | Session_ID (FK)  |
+                      +----------------+
+                              
+                          |
+                          | n
+                          |
+                          |
+                       [ Coaching ]
+                      +----------------+
+                      | Coaching_ID     |
+                      | Coach_ID (FK)   |
+                      | Session_ID (FK)  |
+                      +----------------+
+                            ^
+                            | 
+                            |  n
+                            |
+                         [ Coach ]
+                      +----------------+
+                      | Coach_ID       |
+                      | Last_Name      |
+                      | First_Name     |
+                      | Age            |
+                      | Specialty      |
+                      +----------------+
